@@ -40,6 +40,7 @@ public class PalavrasController {
 	public void busca(){
 		result.include("palavraList", repositorio.todasPalavras());
 		result.include("sinonimoList", repositorio.todosSinonimos());
+		result.include("antonimoList", repositorio.todosAntonimos());
 		result.include("autorList", repositorio.todosAutores());
 		result.redirectTo(this).resultado();
 	}
